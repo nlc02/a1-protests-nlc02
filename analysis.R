@@ -239,6 +239,7 @@ high_level_table <- table(high_level_purpse)
 
 # Reflection: Take a look (`View()`) your `high_level_table` variable. What
 # picture does this paint of the U.S.?
+View(high_level_table)
 
 
 # Part 6: Independent Exploration -----------------------------------------
@@ -247,3 +248,13 @@ high_level_table <- table(high_level_purpse)
 # quickly ask questions of the dataset. For example, in the above sections,
 # you wrote functions to ask the same question about different months, or
 # locations. If you need any guidance here, feel free to ask!
+sources <- function(article) {
+  all_sources <- c(protests$Source)
+  N <- c(length(all_sources[grep(article, all_sources)]))
+  answer <- paste("There are", N, "articles.")
+  answer
+}
+
+sources("capitalgazette")
+sources("wishtv")
+sources("www")
