@@ -145,20 +145,27 @@ max_in_state <- max(state_table)
 # Extract the `Date` column into a variable called `dates` by passing the
 # column to the `as.Date()` function (this will process the values as dates,
 # which are *luckily* already in an optimal format for parsing)
+dates <- as.Date(protests$Date)
 
 # What is the most recent date in the dataset? `most_recent`
+most_recent <- max(dates)
 
 # What is the earliest date in the dataset? `earliest`
+earliest <- min(dates)
 
 # What is the length of the timespan of the dataset? `time_span`
 # hint: R can do math with dates pretty well by default!
+time_span <- most_recent - earliest
 
 # Create a vector of the dates that are in 2020 `in_2020`
+in_2020 <- c(dates[str_detect(dates, "2020") == TRUE])
 
 # Create a vector of the dates that are in 2019. `in_2019`
+in_2019 <- c(dates[str_detect(dates, "2019") == TRUE]) 
 
 # What is the ratio of the number of protests in 2020 comparted to 2019?
 # `ratio_2020_2019`
+ratio_2020_2019 <- length(in_2020) / length(in_2019)
 
 # Reflection: Does the change in the number of protests from 2019 to 2020
 # surprise you? Why or why not?
@@ -167,12 +174,20 @@ max_in_state <- max(state_table)
 # and returns the sentence:
 # "There were N protests on DATE.", where N is the number of protests on that
 # date, and DATE is the date provided
+count_on_date <- function(date) {
+  N <- length(dates[str_detect(dates, date) == TRUE])
+  answer <- paste("There were", N, "protests on", date)
+  answer <- paste(answer, ".", sep = "")
+  answer
+}
 
 # Using your function you just wrote, how many protests were there on
 # May 24th, 2020? `num_may_24`
+num_may_24 <- count_on_date("2020-05-24")
 
 # Using your function you just wrote, how many protests were there on
 # May 31th, 2020? `num_on_may_31`
+num_on_may_31 <- count_on_date("2020-05-31")
 
 # For more on this timeline, see:
 # https://www.nytimes.com/article/george-floyd-protests-timeline.html
@@ -180,11 +195,14 @@ max_in_state <- max(state_table)
 # How many protests occured each month in 2020? `by_month_table`
 # Hint: use the `months()` function, your `in_2020` dates, and the `table()`
 # Function. If you like, you can do this in multiple different steps.
+by_month_table <- table(months(in_2020))
 
 # As a comparison, let's assess the change between July 2019 and July 2020.
 # What is the *difference* in the number of protests between July 2020 and
 # July 2019? You'll want to do this in multiple steps as you see fit, though
 # your answer should be stored in the variable `change_july_protests`.
+by_month_table_2019 <- table(months(in_2019))
+change_july_protests <- by_month_table["July"] - by_month_table_2019["July"]
 
 # Reflection: do a bit of research. Find at least *two specific policies* that
 # have been changed as a result of protests in 2020. These may be at the
