@@ -28,18 +28,24 @@ num_featrues <- ncol(protests)
 # In this section, you're exploring the number of attendees.
 
 # Extract the `Attendees` column into a variable called `num_attendees`
+num_attendees <- protests$Attendees
 
 # What is the lowest number of attendees? `min_attendees`
 # (hint for this and other calculations: you'll need to consider missing values)
+min_attendees <- min(num_attendees, na.rm = T)
 
 # What is the highest number of attendees? `max_attendees`
+max_attendees <- max(num_attendees, na.rm = T)
 
 # What is the mean number of attendees? `mean_attendees`
+mean_attendees <- mean(num_attendees, na.rm = T)
 
 # What is the median number of attendees? `median_attendees`
+median_attendees <- median(num_attendees, na.rm = T)
 
 # What is the difference between the mean and median number of attendees?
 # `mean_median_diff`
+mean_median_diff <- mean_attendees - median_attendees
 
 # Reflection: What does the difference between the mean and the median
 # tell you about the *distribution* of the data? (if you're unfamiliar with
@@ -50,10 +56,12 @@ num_featrues <- ncol(protests)
 # Store the plot in a variable called `attendess_distribution`
 # (Note, we'll use much more refined plotting methods, and pay far
 # more attention to detail later in the course)
+attendees_distribution <- boxplot(num_attendees)
 
 # Create another boxplot of the *log* of the number of attendees.
 # Store the plot in a variable `log_attendees_distribution`.
 # (note, you will see a warning in the console, which is expected)
+log_attendees_distribution <- boxplot(log(num_attendees))
 
 
 # Part 3: Locations -------------------------------------------------------
