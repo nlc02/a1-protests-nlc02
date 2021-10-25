@@ -214,8 +214,10 @@ change_july_protests <- by_month_table["July"] - by_month_table_2019["July"]
 
 # In this section, you're exploring *why* protests happened
 # Extract the `Event..legacy..see.tags.` column into a variable called `purpose`
+purpose <- protests$Event..legacy..see.tags.
 
 # How many different purposes are listed in the dataset? `num_purposes`
+num_purposes <- length(unique(purpose))
 
 # That's quite a few -- if you look at -- View() -- the vector, you'll notice
 # a common pattern for each purpose. It's listed as:
@@ -226,11 +228,14 @@ change_july_protests <- by_month_table["July"] - by_month_table_2019["July"]
 # you would extract "Civil Rights". You'll also have to *remove the space*
 # before the first parenthasis.
 # Hint: this will take a little bit of googling // trial and error. Be patient!
+high_level_purpse <- c(gsub(" \\(.*", "", purpose))
 
 # How many "high level" purposes have you identified? `num_high_level`
+num_high_level <- length(unique(high_level_purpse))
 
 # Create a table that counts the number of protests for each high level purpose
 # `high_level_table`
+high_level_table <- table(high_level_purpse)
 
 # Reflection: Take a look (`View()`) your `high_level_table` variable. What
 # picture does this paint of the U.S.?
