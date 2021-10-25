@@ -69,13 +69,18 @@ log_attendees_distribution <- boxplot(log(num_attendees))
 # In this section, you're exploring where protests happened.
 
 # Extract the `Location` column into a variable called `locations`
+locations <- protests$Location
 
 # How many *unique* locations are in the dataset? `num_locations`
+num_locations <- length(unique(locations))
 
 # How many protests occured in Washington? `num_in_wa`
 # (hint: use a function from the stringr package to detect the letters "WA")
+is_WA <- str_detect(locations, "WA")
+num_in_wa <- length(is_WA[is_WA == TRUE])
 
 # What proportion of protests occured in Washington? `prop_in_wa`
+prop_in_wa <- num_in_wa / num_locations
 
 # Reflection: Does the number of protests in Washington surprise you?
 # Why or why not?
@@ -87,29 +92,42 @@ log_attendees_distribution <- boxplot(log(num_attendees))
 # was provided into the function.
 # Note, you should count the number of locations that *match* the parameter
 # put into the function, so `Seattle` should be a match for "Seattle, WA"
+count_in_location <- function(location) {
+  N <- length(locations[str_detect(locations, location) == TRUE])
+  answer <- paste ("There were", N, "protests in", location)
+  answer <- paste(answer, ".", sep = "")
+  answer
+}
 
 # Use your function above to describe the number of protests in "Washington, DC"
 # `dc_summary`
+dc_summary <- count_in_location("Washington, DC")
 
 # Use your function above to describe the number of protests in "Minneapolis"
 # `minneapolis_summary`
+minneapolis_summary <- count_in_location("Minneapolis")
 
 # Create a new vector `states` which is the last two characters of each
 # value in the `locations` vector. Hint, you may want to again use the
 # `stringr` package
+states <- str_sub(protests$Location, -2, -1)
 
 # Create a vector of the unique states in your dataset. `uniq_states`
+uniq_states <- unique(states)
 
 # Create a summary sentence for each state by passing your `uniq_states`
 # variable and `count_in_location` variables to the `sapply()` function.
 # Store your results in `state_summary`
 # (don't miss how amazing this is! Very powerful to apply your function to an
 # entire vector *at once* with `sapply()`)
+state_summary <- sapply(uniq_states, count_in_location)
 
 # Create a summary table by passing your `states` variable to the `table()`
 # funciton, and storing the result in a variable `state_table`.
+state_table <- table(states)
 
 # Optional: use the View() function to more easily read the table
+View(state_table)
 
 # Reflection: Looking at the `state_table` variable, what data quality issues
 # do you notice, and how would you use that to change your analysis (no need
@@ -117,6 +135,7 @@ log_attendees_distribution <- boxplot(log(num_attendees))
 
 # What was the maximum number of protests in a state? `max_in_state`
 # (hint: use your `state_table` variable)
+max_in_state <- max(state_table)
 
 
 # Part 4: Dates -----------------------------------------------------------
