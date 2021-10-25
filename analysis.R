@@ -6,9 +6,7 @@
 # listed with each question in `backtics`.
 # For each prompt marked `Reflection`, please write a response
 # in your `README.md` file.
-########
-#will this work?
-
+library("dplyr")
 
 # Part 1:Set up -----------------------------------------------------------
 
@@ -17,11 +15,13 @@
 
 # Load the data from https://countlove.org/data/data.csv
 # into a variable called `protests`
+protests <- read.csv("https://countlove.org/data/data.csv")
 
 # How many protests are in the dataset? `num_protests`
+num_protests <- nrow(protests)
 
 # How much information is available about each protest? `num_features`
-
+num_featrues <- ncol(protests)
 
 # Part 2: Attendees -------------------------------------------------------
 
