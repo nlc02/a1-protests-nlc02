@@ -23,6 +23,8 @@ In the section below, create an **unordered list** of the three articles you fou
 ## Accompanying Image
 In this section, please **display one image** to accompany your text, and describe _why_ you included it (~2 - 3 sentences). This will require that you download an image into your project folder. In your description, use **bold** and _italics_ (at least once, for practice) to emphasize some of your points.
 
+![Protest](https://github.com/nlc02/a1-protests-nlc02/blob/main/!%5BProtest%5D(Protest_Image.jpeg).jpeg)
+
 This image has placed two photos side by side that are almost **60 years** apart. I chose this image because the right photo is from the march in D.C. where **Martin Luther King** gave his incredibly famous "I Have a Dream" speech and the left is from the summer of 2020. Notably, they are shockingly similar demonstrating the _longevity of the BLM movement's fight for equality_.
 
 ## Analysis
@@ -37,7 +39,7 @@ At this point, you should open up your `analysis.R` script to begin working with
 - Does the change in the number of protests from 2019 to 2020 surprise you? Why or why not?
   - **No**, being on social media during both years I am able to recognize context to the great disproportion between 2019 and 2020.
 - Do a bit of research. Find at least *two specific policies* that have been changed as a result of protests in 2020. These may be at the city, state, or University level. Please provide a basic summary, as well as a link to each article.
-  - 
+  -
 - Take a look (`View()`) your `high_level_table` variable. What picture does this paint of the U.S.?
   - The U.S. has a **huge problem of racial injustice** above anything else right now.
 
