@@ -29,17 +29,17 @@ This image has placed two photos side by side that are almost **60 years** apart
 At this point, you should open up your `analysis.R` script to begin working with the data. The script will guide you through an initial analysis of the data. Throughout the script, there are prompts labeled **Reflection**. Please write 1 - 2 sentences for each of these reflections below:
 
 - What does the difference between the mean and the median tell you about the *distribution* of the data?
-  - the *distribution* is skewed
+  - The _distribution_ is **skewed** since the mean and median are different. The median doesn't depend on the values of the dataset like the mean does therefore the **median** has a better representation of the data.
 - Does the number of protests in Washington surprise you? Why or why not?
-  -
+  - **Not entirely**, I have always considered Washington to be a mostly democratic state. Although I have a bias since I attend the University of Washington which I understand to be a _liberal_ univeristy.
 - Looking at the `state_table` variable, what data quality issues do you notice, and how would you use that to change your analysis (no need to actually change your analysis)?
-  -
+  - There are some case issues with the state since some are in **_lowercase_ instead of uppercase**. I would add them into their corresponding uppercase state in order to have a number of states that is _less than or equal to 50_.
 - Does the change in the number of protests from 2019 to 2020 surprise you? Why or why not?
-  -
+  - **No**, being on social media during both years I am able to recognize context to the great disproportion between 2019 and 2020.
 - Do a bit of research. Find at least *two specific policies* that have been changed as a result of protests in 2020. These may be at the city, state, or University level. Please provide a basic summary, as well as a link to each article.
-  -
+  - 
 - Take a look (`View()`) your `high_level_table` variable. What picture does this paint of the U.S.?
-  -
+  - The U.S. has a **huge problem of racial injustice** above anything else right now.
 
 ## Final Thoughts
 When you are finished, with your analysis, please answer the following questions in 1-2 sentences each.
