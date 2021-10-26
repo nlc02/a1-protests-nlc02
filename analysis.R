@@ -7,7 +7,11 @@
 # For each prompt marked `Reflection`, please write a response
 # in your `README.md` file.
 library("dplyr")
-
+library("stringr")
+library("styler")
+library("lintr")
+style_file("analysis.R")
+lint("analysis.R")
 # Part 1:Set up -----------------------------------------------------------
 
 # In this section, you're loading the data and necessary packages.
@@ -94,7 +98,7 @@ prop_in_wa <- num_in_wa / num_locations
 # put into the function, so `Seattle` should be a match for "Seattle, WA"
 count_in_location <- function(location) {
   N <- length(locations[str_detect(locations, location) == TRUE])
-  answer <- paste ("There were", N, "protests in", location)
+  answer <- paste("There were", N, "protests in", location)
   answer <- paste(answer, ".", sep = "")
   answer
 }
@@ -161,7 +165,7 @@ time_span <- most_recent - earliest
 in_2020 <- c(dates[str_detect(dates, "2020") == TRUE])
 
 # Create a vector of the dates that are in 2019. `in_2019`
-in_2019 <- c(dates[str_detect(dates, "2019") == TRUE]) 
+in_2019 <- c(dates[str_detect(dates, "2019") == TRUE])
 
 # What is the ratio of the number of protests in 2020 comparted to 2019?
 # `ratio_2020_2019`
