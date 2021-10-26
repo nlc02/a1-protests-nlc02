@@ -23,10 +23,9 @@ In the section below, create an **unordered list** of the three articles you fou
 ## Accompanying Image
 In this section, please **display one image** to accompany your text, and describe _why_ you included it (~2 - 3 sentences). This will require that you download an image into your project folder. In your description, use **bold** and _italics_ (at least once, for practice) to emphasize some of your points.
 
+![Protest](Protest_Image.jpeg).jpeg
 
 ![Protests](https://github.com/nlc02/a1-protests-nlc02/blob/6b41ae5e2654a724a9510a81b1470b9e8f22dee9/!%5BProtest%5D(Protest_Image.jpeg).jpeg "Compare Protests")
-
-
 
 This image has placed two photos side by side that are almost **60 years** apart. I chose this image because the right photo is from the march in D.C. where **Martin Luther King** gave his incredibly famous "I Have a Dream" speech and the left is from the summer of 2020. Notably, they are shockingly similar demonstrating the _longevity of the BLM movement's fight for equality_.
 
@@ -42,13 +41,14 @@ At this point, you should open up your `analysis.R` script to begin working with
 - Does the change in the number of protests from 2019 to 2020 surprise you? Why or why not?
   - **No**, being on social media during both years I am able to recognize context to the great disproportion between 2019 and 2020.
 - Do a bit of research. Find at least *two specific policies* that have been changed as a result of protests in 2020. These may be at the city, state, or University level. Please provide a basic summary, as well as a link to each article.
-  -
+  - [Reparation, police reform, cannabis: Here is what Governor Newsom signed into law on last bill-signing period](https://www.abc10.com/article/news/politics/newsom-signs-bills-last-day/103-2dcbe3eb-2ce8-4647-804c-2b5786d823d2)  **In California**, Governor Newsom was able to get **four** pieces of legislation signed and passed by the _House_ and _Senate_ into laws.
+  - [Conneticut Gov. Ned Lamont signs sweeping police reform bill](https://www.cnn.com/2020/07/31/us/connecticut-police-reform-bill-signed/index.html) **In Conneticut** Governor Lamont was able to pass a policing policy bill into law on _July 24th, 2020_.
 - Take a look (`View()`) your `high_level_table` variable. What picture does this paint of the U.S.?
   - The U.S. has a **huge problem of racial injustice** above anything else right now.
 
 ## Final Thoughts
 When you are finished, with your analysis, please answer the following questions in 1-2 sentences each.
 
-- What about the analysis surprised you?
-- What parts of this analysis did you find challenging?
-- What types of analysis do you wish you were able to do with the dataset, but currently don't have the technical skills to do?
+- What about the analysis surprised you? I was surprised that some of the states are not in the correct case. I kept thinking that my code was wrong but I realized that the cases are not the same.
+- What parts of this analysis did you find challenging? I had a difficult time with all of the functions mainly because of the complexity and I would forget a line that was necessary.
+- What types of analysis do you wish you were able to do with the dataset, but currently don't have the technical skills to do? I wish I would be able to map this dataset based on which state or city.
