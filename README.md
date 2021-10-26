@@ -23,7 +23,7 @@ In the section below, create an **unordered list** of the three articles you fou
 ## Accompanying Image
 In this section, please **display one image** to accompany your text, and describe _why_ you included it (~2 - 3 sentences). This will require that you download an image into your project folder. In your description, use **bold** and _italics_ (at least once, for practice) to emphasize some of your points.
 
-![Protest](Protest_Image.jpeg).jpeg
+![Protest](https://github.com/nlc02/a1-protests-nlc02/blob/0a742db57a2a9315a12afc3931c54a5012db2a61/!%5BProtest%5D(Protest_Image.jpeg).jpeg
 
 This image has placed two photos side by side that are almost **60 years** apart. I chose this image because the right photo is from the march in D.C. where **Martin Luther King** gave his incredibly famous "I Have a Dream" speech and the left is from the summer of 2020. Notably, they are shockingly similar demonstrating the _longevity of the BLM movement's fight for equality_.
 
