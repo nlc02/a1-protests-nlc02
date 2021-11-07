@@ -25,7 +25,7 @@ protests <- read.csv("https://countlove.org/data/data.csv")
 num_protests <- nrow(protests)
 
 # How much information is available about each protest? `num_features`
-num_featrues <- ncol(protests)
+num_features <- ncol(protests)
 
 # Part 2: Attendees -------------------------------------------------------
 
@@ -84,7 +84,7 @@ is_WA <- str_detect(locations, "WA")
 num_in_wa <- length(is_WA[is_WA == TRUE])
 
 # What proportion of protests occured in Washington? `prop_in_wa`
-prop_in_wa <- num_in_wa / num_locations
+prop_in_wa <- num_in_wa / num_protests
 
 # Reflection: Does the number of protests in Washington surprise you?
 # Why or why not?
@@ -205,8 +205,9 @@ by_month_table <- table(months(in_2020))
 # What is the *difference* in the number of protests between July 2020 and
 # July 2019? You'll want to do this in multiple steps as you see fit, though
 # your answer should be stored in the variable `change_july_protests`.
-by_month_table_2019 <- table(months(in_2019))
-change_july_protests <- by_month_table["July"] - by_month_table_2019["July"]
+july_2019 <- length(in_2019[months(in_2019) == "July"])
+july_2020 <- length(in_2020[months(in_2020) == "July"])
+change_july_protests <- july_2020 - july_2019
 
 # Reflection: do a bit of research. Find at least *two specific policies* that
 # have been changed as a result of protests in 2020. These may be at the
