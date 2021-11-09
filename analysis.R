@@ -233,7 +233,8 @@ num_purposes <- length(unique(purpose))
 # you would extract "Civil Rights". You'll also have to *remove the space*
 # before the first parenthasis.
 # Hint: this will take a little bit of googling // trial and error. Be patient!
-high_level_purpse <- c(gsub(" \\(.*", "", purpose))
+high_level_purpse <- str_trim(str_replace_all(purpose, "\\(....*", ""))
+
 
 # How many "high level" purposes have you identified? `num_high_level`
 num_high_level <- length(unique(high_level_purpse))
